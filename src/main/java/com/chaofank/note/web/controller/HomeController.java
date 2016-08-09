@@ -1,8 +1,10 @@
 package com.chaofank.note.web.controller;
 
+import com.chaofank.note.bean.Product;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.ArrayList;
@@ -17,10 +19,15 @@ import java.util.Map;
 @RequestMapping("home")
 public class HomeController {
 
-    @RequestMapping("index")
+    @RequestMapping(value = "index", method = RequestMethod.GET, produces = "application/json")
     @ResponseBody
-    public String index(Model model) {
+    public Product index(Model model) {
+        Product product = new Product();
+        product.setName("AC");
+        product.setVendor("Gree");
 
-        return "String";
+        return product;
     }
+
+    
 }
