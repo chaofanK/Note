@@ -8,8 +8,8 @@
        http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
    <mvc:annotation-driven />
    <context:annotation-config />
-   <context:component-scan base-package="com.chaofank.note.web.controller" />
-   <mvc:default-servlet-handler />
+   <context:component-scan base-package="com.chaofank.note" />
+   <!--mvc:default-servlet-handler /-->
 
    <!--bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">
       <property name="messageConverters">
@@ -20,4 +20,21 @@
    </bean>
    <bean id="mappingJacksonHttpMessageConverter"
          class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter" /-->
+
+  <!--bean id="env" class="org.springframework.beans.factory.config.FieldRetrievingFactoryBean">
+    <property name="staticField" value="com.evernote.auth.EvernoteService.SANDBOX" />
+  </bean>
+
+  <bean id="noteStore" class="com.chaofank.note.evernote.NoteStoreClientBean">
+    <property name="evernoteAuth">
+      <bean id="evernoteAuth" class="com.evernote.auth.EvernoteAuth">
+        <constructor-arg index="0" ref="env"/>
+        <constructor-arg index="1" value="S=s1:U=8ff93:E=15e27fe89e6:C=156d04d5c10:P=1cd:A=en-devtoken:V=2:H=7ab31dde187b39b49143b0fd2746adb1"/>
+      </bean>
+    </property>
+  </bean>
+
+  <bean id="evernoteService" class="com.chaofank.note.evernote.EvernoteService">
+    <property name="noteStore" ref="noteStore" />
+  </bean-->
 </beans>

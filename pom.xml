@@ -10,6 +10,8 @@
 
   <properties>
     <spring.version>4.3.2.RELEASE</spring.version>
+    <dropbox.api.version>2.1.1</dropbox.api.version>
+    <jackson.version>2.7.5</jackson.version>
   </properties>
 
   <dependencies>
@@ -32,8 +34,14 @@
     <dependency>
       <groupId>com.fasterxml.jackson.core</groupId>
       <artifactId>jackson-databind</artifactId>
-      <version>2.4.0</version>
+      <version>${jackson.version}</version>
     </dependency>
+    <dependency>
+      <groupId>com.dropbox.core</groupId>
+      <artifactId>dropbox-core-sdk</artifactId>
+      <version>${dropbox.api.version}</version>
+    </dependency>
+
   </dependencies>
   <build>
     <finalName>note</finalName>
