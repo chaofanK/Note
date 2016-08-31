@@ -21,7 +21,7 @@ public class BlogController {
 
     @RequestMapping(value = "/note/{id}")
     @ResponseBody
-    public MarkdownBlog Note(@PathVariable String id) {
+    public MarkdownBlog Note(@PathVariable int id) {
         return blogService.getBlog(id);
     }
 

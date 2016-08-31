@@ -8,6 +8,6 @@ import java.util.List;
  * Created by Kevin on 2016-08-28.
  */
 public interface BlogService {
-    MarkdownBlog getBlog(String id);
+    MarkdownBlog getBlog(int id);
     List<MarkdownBlog> getBlogList();
 }

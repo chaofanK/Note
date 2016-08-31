@@ -10,7 +10,7 @@ public class MarkdownBlog {
     private String title;
     private String content;
     private Date dateCreated;
-    private Date lastModified;
+    private Date dateLastModified;
 
     public String getTitle() {
         return title;
@@ -44,12 +44,12 @@ public class MarkdownBlog {
         this.dateCreated = dateCreated;
     }
 
-    public Date getLastModified() {
-        return lastModified;
+    public Date getDateLastModified() {
+        return dateLastModified;
     }
 
-    public void setLastModified(Date lastModified) {
-        this.lastModified = lastModified;
+    public void setDateLastModified(Date dateLastModified) {
+        this.dateLastModified = dateLastModified;
     }
 
     @Override
@@ -59,7 +59,7 @@ public class MarkdownBlog {
                 ", title='" + title + '\'' +
                 ", content='" + content + '\'' +
                 ", dateCreated=" + dateCreated +
-                ", lastModified=" + lastModified +
+                ", dateLastModified=" + dateLastModified +
                 '}';
     }
 }

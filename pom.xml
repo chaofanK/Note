@@ -15,6 +15,7 @@
     <jackson.version>2.7.5</jackson.version>
     <c3p0.version>0.9.5.2</c3p0.version>
     <mysql.driver.version>5.1.39</mysql.driver.version>
+    <common.codec.version>1.10</common.codec.version>
     <junit.version>3.8.1</junit.version>
   </properties>
 
@@ -59,6 +60,13 @@
       <artifactId>mysql-connector-java</artifactId>
       <version>${mysql.driver.version}</version>
     </dependency>
+
+    <dependency>
+      <groupId>commons-codec</groupId>
+      <artifactId>commons-codec</artifactId>
+      <version>${common.codec.version}</version>
+    </dependency>
+
 
 
     <dependency>

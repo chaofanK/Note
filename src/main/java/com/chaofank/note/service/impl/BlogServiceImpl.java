@@ -17,13 +17,11 @@ public class BlogServiceImpl implements BlogService {
     @Autowired
     private BlogMapper blogMapper;
 
-    public MarkdownBlog getBlog(String id) {
-        System.out.println("service");
-        System.out.println(blogMapper.getBlog(1));
-        return null;
+    public MarkdownBlog getBlog(int id) {
+        return blogMapper.getBlog(id);
     }
 
     public List<MarkdownBlog> getBlogList() {
-        return null;
+        return blogMapper.getBlogList();
     }
 }
