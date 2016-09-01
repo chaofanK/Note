@@ -4,9 +4,7 @@ import com.chaofank.note.bean.MarkdownBlog;
 import com.chaofank.note.service.BlogService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -29,5 +27,12 @@ public class BlogController {
     @ResponseBody
     public List<MarkdownBlog> getNoteList() {
         return blogService.getBlogList();
+    }
+
+    @RequestMapping(value = "/new", method = RequestMethod.POST)
+    @ResponseBody
+    public MarkdownBlog createNote(@RequestBody MarkdownBlog blog) {
+        System.out.println(blog);
+        return blog;
     }
 }
